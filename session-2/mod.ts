@@ -67,7 +67,9 @@ Deno.unrefTimer(setInterval(() => {
 }, 1000));
 
 console.log(lib.symbols.is_prime(9973));
-//lib.symbols.is_prime_async(18446744073709551557n).then(res => console.log(res));
+lib.symbols.is_prime_async(18446744073709551557n).then((res) =>
+  console.log(res)
+);
 
 const callback = new Deno.UnsafeCallback({
   parameters: ["pointer", "bool"],
