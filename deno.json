@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "compile:session-1": "deno run --allow-all session-1/build.ts",
+    "compile:session-2": "deno run --allow-all session-2/build.ts",
+    "compile": "deno task compile:session-1 && deno task compile:session-2",
+    "session-1": "deno task compile:session-1 && deno run --unstable --allow-ffi --allow-read session-1/mod.ts",
+    "session-2": "deno task compile:session-2 && deno run --unstable -A session-2/mod.ts",
+    "start": "deno task session-1 && deno task session-2"
+  }
+}
