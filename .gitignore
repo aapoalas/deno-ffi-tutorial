@@ -2,3 +2,5 @@ session-1/lib.o
 session-1/libsession-1.so
 session-2/lib.o
 session-2/libsession-2.so
+session-3/lib.o
+session-3/libsession-3.so
